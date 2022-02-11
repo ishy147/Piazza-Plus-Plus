@@ -1,0 +1,4 @@
+Google develiper links:
+  Callender-python: https://developers.google.com/calendar/api/quickstart/python
+  
+  
