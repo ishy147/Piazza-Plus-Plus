@@ -2,14 +2,18 @@
 
 Team Members: Andrew, Neil, Brandon, Labib, Austin
 
-admin account
-	email:admin@iit.edu
-	pass:admin
-	email:prof@iit.edu
-	pass:prof
-    	email:student@iit.edu
-    	pass:student
-    	classes: "cs100,cs200,math200"
+admin account - 
+email:admin@iit.edu
+pass:admin
+
+prof account - 
+email:prof@iit.edu
+pass:prof
+
+student account - 
+email:student@iit.edu
+pass:student 
+classes: "cs100,cs200,math200"
 
 1) to start the program, in the terminal make sure your in the programs folder.
 2) then in the terminal activate the venv with "source venv/scripts/activate"
@@ -26,12 +30,14 @@ some things that still need to be added
  
 simple layout for how home page will be and how the student will go though
 
+(below looks better when read on text file)
+
 only show their classes
 		(diagram example)
 			home
 				class1
 					(inside a class is posts and student can reply)
-                class2
+                		class2
 					(inside a class is posts and student can reply)
-                class3
+                		class3
 					(inside a class is posts and student can reply)
