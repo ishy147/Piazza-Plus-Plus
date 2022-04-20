@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+
+{{ classes = current_user.classes.split(',') }}
+{% for class in classes %}
+  <p>
+    class: <a class="ml-2" href="{{ url_for('users.classes') }}">{{ class }}</a>
+  </p>
+{% endfor %}
+
+{% endblock content %}
