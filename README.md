@@ -3,15 +3,13 @@
 Team Members: Andrew, Neil, Brandon, Labib, Austin
 
 admin account
-    email:admin@iit.edu
-    pass:admin
-
-    email:prof@iit.edu
-    pass:prof
-
-    email:student@iit.edu
-    pass:student
-    classes: "cs100,cs200,math200"
+	email:admin@iit.edu
+	pass:admin
+	email:prof@iit.edu
+	pass:prof
+    	email:student@iit.edu
+    	pass:student
+    	classes: "cs100,cs200,math200"
 
 1) to start the program, in the terminal make sure your in the programs folder.
 2) then in the terminal activate the venv with "source venv/scripts/activate"
