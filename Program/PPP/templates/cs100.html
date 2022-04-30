@@ -1,5 +1,57 @@
 {% extends "layout.html" %}
 {% block content %}
+    {% if current_user.is_authenticated and current_user.role == 'prof'%}
     <a href="">new post</a>
+    {% endif %}
     
+    <article class="media content-section">
+        <div class="media-body">
+            <h2 class="article-title"> CS 100</h2>
+        </div>
+    </article>
+    <article class="media content-section">
+        <div class="media-body">
+            <h2 class="article-title"> assignment 1</h2>
+            <p> In this assingment you will be working on... </p>
+            {% if current_user.is_authenticated and current_user.role == 'student'%}
+            <a href="">reply</a>
+            {% endif %}
+        </div>
+    </article>
+    <article class="media content-section">
+        <div class="media-body">
+            <h2 class="article-title"> assignment 2</h2>
+            <p> In this assingment you will be working on... </p>
+            {% if current_user.is_authenticated and current_user.role == 'student'%}
+            <a href="">reply</a>
+            {% endif %}
+        </div>
+    </article>
+    <article class="media content-section">
+        <div class="media-body">
+            <h2 class="article-title"> assignment 3</h2>
+            <p> In this assingment you will be working on... </p>
+            {% if current_user.is_authenticated and current_user.role == 'student'%}
+            <a href="">reply</a>
+            {% endif %}
+        </div>
+    </article>
+    <article class="media content-section">
+        <div class="media-body">
+            <h2 class="article-title"> assignment 4</h2>
+            <p> In this assingment you will be working on... </p>
+            {% if current_user.is_authenticated and current_user.role == 'student'%}
+            <a href="">reply</a>
+            {% endif %}
+        </div>
+    </article>
+    <article class="media content-section">
+        <div class="media-body">
+            <h2 class="article-title"> assignment 5</h2>
+            <p> In this assingment you will be working on... </p>
+            {% if current_user.is_authenticated and current_user.role == 'student'%}
+            <a href="">reply</a>
+            {% endif %}
+        </div>
+    </article>
 {% endblock content %}
