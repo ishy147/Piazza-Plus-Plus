@@ -1,5 +1,33 @@
 {% extends "layout.html" %}
 {% block content %}
-
+            {% if current_user.is_authenticated and current_user.role == 'admin'%}
+                <a class="nav-item nav-link" href="{{ url_for('users.register') }}">Register</a>
+                <a class="nav-item nav-link" href="{{ url_for('users.account') }}">Account</a>
+                <a class="nav-item nav-link" href="{{ url_for('users.logout') }}">Logout</a>
+            {% elif current_user.is_authenticated and current_user.role == 'prof'%}
+            <article class="media content-section">
+                <div class="media-body">
+                        <h2 class="article-title"> <a href="{{ url_for('users.cs100class') }}">CS 100</a></h2>
+                </div>
+            </article>
+            {% elif current_user.is_authenticated and current_user.role == 'student'%}
+            <article class="media content-section">
+                <div class="media-body">
+                        <h2 class="article-title"> <a href="{{ url_for('users.cs100class') }}">CS 100</a></h2>
+                </div>
+            </article>
+            <article class="media content-section">
+                <div class="media-body">
+                    <h2 class="article-title"> <a href="{{ url_for('users.cs200class') }}">CS 200</a></h2>
+                </div>
+            </article>
+            <article class="media content-section">
+                <div class="media-body">
+                    <h2 class="article-title"> <a href="{{ url_for('users.math200class') }}">math 200</a></h2>
+                </div>
+            </article>
+            {% else %}
+                <p>Please log in to view classes</p>
+            {% endif %}
 
 {% endblock content %}

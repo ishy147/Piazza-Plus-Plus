@@ -36,7 +36,6 @@
                 <a class="nav-item nav-link" href="{{ url_for('users.account') }}">Account</a>
                 <a class="nav-item nav-link" href="{{ url_for('users.logout') }}">Logout</a>
               {% elif current_user.is_authenticated and current_user.role == 'prof'%}
-                
                 <a class="nav-item nav-link" href="{{ url_for('users.account') }}">Account</a>
                 <a class="nav-item nav-link" href="{{ url_for('users.logout') }}">Logout</a>
               {% elif current_user.is_authenticated and current_user.role == 'student'%}

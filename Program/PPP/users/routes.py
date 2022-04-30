@@ -36,6 +36,18 @@ def login():
             flash('Login Unsuccessful. Please check email and password', 'danger')
     return render_template('login.html', title='Login', form=form)
 
+@users.route("/home/cs100/")
+def cs100class():
+    return render_template('cs100.html', title='cs100')
+
+@users.route("/home/cs200/")
+def cs200class():
+    return render_template('cs200.html', title='cs200')
+
+@users.route("/home/math200/")
+def math200class():
+    return render_template('math200.html', title='math200')
+
 
 @users.route("/logout")
 def logout():
@@ -60,7 +72,7 @@ def account():
         form.username.data = current_user.username
         form.email.data = current_user.email
     image_file = url_for('static', filename='profile_pics/' + current_user.image_file)
-    return render_template('account.html', title='Account',
+    return render_template('accounts.html', title='Account',
                            image_file=image_file, form=form)
 
 

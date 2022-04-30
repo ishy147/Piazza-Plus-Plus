@@ -22,13 +22,13 @@ def new_post():
                            form=form, legend='New Post')
 
 
-@posts.route("/classes/<int:classname>/<int:post_id>/")
+@posts.route("/classes/newpost/")
 def post(post_id):
     post = Post.query.get_or_404(post_id)
     return render_template('post.html', title=post.title, post=post)
 
 
-@posts.route("/classes/<int:classname>/<int:post_id>/update/", methods=['GET', 'POST'])
+@posts.route("/classes/post/update/", methods=['GET', 'POST'])
 @login_required
 def update_post(post_id):
     post = Post.query.get_or_404(post_id)
@@ -48,7 +48,7 @@ def update_post(post_id):
                            form=form, legend='Update Post')
 
 
-@posts.route("/classes/<int:classname>/<int:post_id>/delete/", methods=['POST'])
+@posts.route("/classes/post/delete/", methods=['POST'])
 @login_required
 def delete_post(classname,post_id):
     post = Post.query.get_or_404(post_id)
